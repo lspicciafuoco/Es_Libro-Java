@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="es_libro_alessiopicciafuoco">
+  <ClassDiagramComponents>
+    <Class name="GUI" package="es_libro_alessiopicciafuoco" visibility="public" xPosition="79.0" yPosition="39.0">
+      <Fields>
+        <Field name="p" type="JPanel" visibility="private"/>
+        <Field name="l1" type="JLabel" visibility="private"/>
+        <Field name="l2" type="JLabel" visibility="private"/>
+        <Field name="l3" type="JLabel" visibility="private"/>
+        <Field name="tf1" type="JTextField" visibility="private"/>
+        <Field name="tf2" type="JTextField" visibility="private"/>
+        <Field name="tf3" type="JTextField" visibility="private"/>
+        <Field name="tf4" type="JTextField" visibility="private"/>
+        <Field name="b1" type="JButton" visibility="private"/>
+        <Field name="b2" type="JButton" visibility="private"/>
+        <Field name="list" type="JList" visibility="private"/>
+        <Field name="lm" type="DefaultListModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Libreria" package="es_libro_alessiopicciafuoco" visibility="public" xPosition="408.0" yPosition="248.0">
+      <Fields>
+        <Field name="libro" type="List&lt;Libro&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ricerca" returnType="List&lt;Libro&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="autore"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="es_libro_alessiopicciafuoco" visibility="public" xPosition="792.0" yPosition="115.0">
+      <Fields>
+        <Field name="titolo" type="String" visibility="private"/>
+        <Field name="autore" type="String" visibility="private"/>
+        <Field name="nPagine" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titolo"/>
+          <Argument type="String" name="autore"/>
+          <Argument type="int" name="nPagine"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitolo" returnType="String" visibility="public"/>
+        <Method name="setTitolo" returnType="void" visibility="public">
+          <Argument type="String" name="titolo"/>
+        </Method>
+        <Method name="getAutore" returnType="String" visibility="public"/>
+        <Method name="setAutore" returnType="void" visibility="public">
+          <Argument type="String" name="autore"/>
+        </Method>
+        <Method name="getnPagine" returnType="int" visibility="public"/>
+        <Method name="setnPagine" returnType="void" visibility="public">
+          <Argument type="int" name="nPagine"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="es_libro_alessiopicciafuoco" visibility="public" xPosition="408.0" yPosition="54.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="libro" source="es_libro_alessiopicciafuoco.Libreria" target="es_libro_alessiopicciafuoco.Libro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Libro&gt;"/>
+    <UseRelation source="es_libro_alessiopicciafuoco.Libreria" target="es_libro_alessiopicciafuoco.Libro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
