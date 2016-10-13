@@ -9,14 +9,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JFrame; 
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
+ * Costruttore della classe GUI
  * @author MASSIMO PICCIAFUOCO
  */
 public class GUI extends JFrame implements ActionListener{
@@ -86,6 +86,7 @@ public class GUI extends JFrame implements ActionListener{
                 
             case "search":  
                 for(Libro l: Libreria.ricerca(tf4.getText())){
+                    System.out.println(l.getAutore());
                     lm.addElement(l.getTitolo());
                 }
                 break;

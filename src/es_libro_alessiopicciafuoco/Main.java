@@ -6,7 +6,7 @@
 package es_libro_alessiopicciafuoco;
 
 /**
- *
+ * Classe Main
  * @author MASSIMO PICCIAFUOCO
  */
 public class Main {
